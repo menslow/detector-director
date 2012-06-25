@@ -1,6 +1,5 @@
-<?php require_once("Detector/Detector.php"); ?>
+<?php require_once("Detector/lib/Detector/Detector.php"); ?>
 <!doctype html>	
-
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>		<html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>		<html lang="en" class="no-js ie8"> <![endif]-->
@@ -18,35 +17,164 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-	<link rel="stylesheet" href="css/style.css?v=2">
-	<script src="js/libs/modernizr-1.6.min.js"></script>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/grid.css">
 
 </head>
 
 <body>
 
-	<div id="container">
+	<div class="page">
+
 		<header>
-			<h1>RESS Detector</h1>
+			<div class="hgroup container_12">
+				<div class="logo grid_4">
+					<strong>RESS Detector</strong>
+				</div>
+				<nav class="grid_8">
+					<!-- main menu -->
+					<ul>
+						<li><a href="#">This</a></li>
+						<li><a href="#">That</a></li>
+						<li><a href="#">Another</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
-		
-		<div id="main">
-		<?php 
-		if ($ua->isMobile) {
-			echo "Mobile";
-		} else {
-			echo "Desktop";
-		}
-		?>
+
+		<div class="content">
+			<div class="full container_12">
+
+			<?php print_r($ua->family); ?>
+
+			<?php if ($ua->isMobile) : ?>
+				<section class="value story">
+					<article class="pitch center grid_12">
+						<h1>Mobile Feed</h1>
+						<p>Growing applications and collaboration one commit at a time.</p>
+					</article>
+					<ul class="step horizontal blocks">
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>1. Start a blank</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>2. Invite collaborators</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>3. Explore the Greenhouse</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>1. Start a blank</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>2. Invite collaborators</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>3. Explore the Greenhouse</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+					</ul>
+				</section>
+
+			<?php else : ?>
+
+				<section class="value story">
+					<article class="pitch center grid_12">
+						<h1>Desktop Feed</h1>
+						<p>Growing applications and collaboration one commit at a time.</p>
+					</article>
+					<ul class="step horizontal blocks">
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>1. Start a blank</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>2. Invite collaborators</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>3. Explore the Greenhouse</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>1. Start a blank</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>2. Invite collaborators</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+						<li class="step-1 grid_4">
+							<figure class="">
+							<img src="" />
+							</figure>
+							<h3>3. Explore the Greenhouse</h3>
+							<p>Post-ironic bespoke pork belly, dolore photo booth nesciunt ennui consequat viral dolor delectus organic proident. </p>
+						</li>
+					</ul>
+				</section>
+
+			<?php endif; ?>
+
+			</div>
 		</div>
-		
-		<footer>
 
-		</footer>
-	</div> <!-- end of #container -->
+		<div>
+			<footer>
+				<div class="inner container_12">
+					<div class="grid_6">
+						<p>&copy; 2012 <a href="http://mistermachine.com">Mister Machine, LLC</a> - all rights reserved</p>
+					</div>
+					<nav class="grid_6">
+						<!-- main menu -->
+						<ul>
+							<li><a href="/index.php?family=desktop">View Desktop Site</a></li>
+							<li><a href="/index.php?family=mobile-basic">View Mobile Site</a></li>
+						</ul>
+					</nav>
+				</div>
+			</footer>
+		</div>
 
+	</div>
 
-	<script></script>
-	
 </body>
 </html>
