@@ -1,10 +1,7 @@
 <?php require_once("Detector/lib/Detector/Detector.php"); ?>
+<?php require_once("Detector/lib/Detector/lib/helpers/detectorHelper.php"); ?>
 <!doctype html>	
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>		<html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>		<html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>		<html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<html lang="en" class="no-js <?php echo DetectorHelpers::createHTMLList($ua); ?>">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -45,12 +42,10 @@
 		<div class="content">
 			<div class="full container_12">
 
-			<?php print_r($ua->family); ?>
-
-			<?php if ($ua->isMobile) : ?>
+			<?php if ($ua->family==='desktop') : ?>
 				<section class="value story">
 					<article class="pitch center grid_12">
-						<h1>Mobile Feed</h1>
+						<h1>Desktop Feed</h1>
 						<p>Growing applications and collaboration one commit at a time.</p>
 					</article>
 					<ul class="step horizontal blocks">
@@ -103,7 +98,7 @@
 
 				<section class="value story">
 					<article class="pitch center grid_12">
-						<h1>Desktop Feed</h1>
+						<h1>Mobile Feed</h1>
 						<p>Growing applications and collaboration one commit at a time.</p>
 					</article>
 					<ul class="step horizontal blocks">
